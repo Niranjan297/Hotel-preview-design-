@@ -21,18 +21,18 @@ const Gallery = () => {
       exit={{ opacity: 0 }}
       className="pt-24 min-h-screen"
     >
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <span className="text-brand-gold text-sm uppercase tracking-[0.2em] font-semibold mb-6 block">Visual Journey</span>
-          <h1 className="text-5xl md:text-8xl italic font-serif text-brand-charcoal">The Gallery.</h1>
+      <section className="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-12 md:mb-20">
+          <span className="text-brand-gold text-[10px] md:text-sm uppercase tracking-[0.2em] font-black mb-6 block">Visual Journey</span>
+          <h1 className="text-4xl md:text-8xl italic font-serif text-brand-charcoal">The Gallery.</h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {images.map((img, idx) => (
             <motion.div 
               key={idx}
               whileHover={{ y: -10 }}
-              className="group relative aspect-[4/5] rounded-[3rem] overflow-hidden border border-brand-charcoal/5"
+              className="group relative aspect-[4/5] rounded-3xl md:rounded-[3rem] overflow-hidden border border-brand-charcoal/5"
             >
               <img 
                 src={img.url}
@@ -41,19 +41,19 @@ const Gallery = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-brand-charcoal/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm">
-                <p className="text-brand-ivory font-serif italic text-3xl">{img.title}</p>
+                <p className="text-brand-ivory font-serif italic text-2xl md:text-3xl">{img.title}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      <section className="bg-brand-charcoal py-24 px-6 text-center text-brand-ivory">
+      <section className="bg-brand-charcoal py-16 md:py-24 px-4 md:px-6 text-center text-brand-ivory">
          <h2 className="text-3xl md:text-5xl italic font-serif mb-8">Experience it in person.</h2>
-         <p className="text-brand-ivory/60 max-w-xl mx-auto mb-10 italic">We are waiting to welcome you to the heart of Kolhapur.</p>
+         <p className="text-brand-ivory/60 max-w-xl mx-auto mb-10 italic text-sm md:text-base">We are waiting to welcome you to the heart of Kolhapur.</p>
          <Link 
             to="/contact"
-            className="bg-brand-gold text-brand-charcoal px-12 py-5 rounded-full text-sm uppercase tracking-widest font-bold hover:scale-105 transition-transform inline-block"
+            className="bg-brand-gold text-brand-charcoal px-10 md:px-12 py-4 md:py-5 rounded-full text-xs uppercase tracking-widest font-black hover:scale-105 active:scale-95 transition-transform inline-block"
           >
             Plan Your Visit
           </Link>
