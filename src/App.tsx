@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import FloatingButtons from './components/layout/FloatingButtons';
 import Home from './pages/Home';
 import About from './pages/About';
 import Rooms from './pages/Rooms';
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/policies" element={<Policies />} />
           </Routes>
         </main>
+        <FloatingButtons />
         <Footer />
       </div>
     </Router>

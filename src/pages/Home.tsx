@@ -26,7 +26,7 @@ const Hero = () => (
         <span className="text-brand-gold text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold mb-4 md:mb-6 block drop-shadow-sm">
           The Heart of Kolhapur
         </span>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-brand-ivory font-serif leading-[1.1] md:leading-[0.9] mb-6 md:mb-8 italic drop-shadow-xl">
+        <h1 className="text-[clamp(2.5rem,8vw,6rem)] text-brand-ivory font-serif leading-[1.1] md:leading-[0.9] mb-6 md:mb-10 italic drop-shadow-xl text-center">
           Peace of Mind Meets <br className="hidden sm:block" /> Modern Luxury
         </h1>
         <p className="text-brand-ivory/90 text-base md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed px-4 md:px-0">
@@ -34,20 +34,12 @@ const Hero = () => (
         </p>
 
         {/* Improved Booking Widget */}
-        <div className="bg-white/95 backdrop-blur-2xl p-2 md:p-2 rounded-3xl md:rounded-full max-w-4xl mx-auto flex flex-col md:flex-row items-stretch md:items-center gap-1 shadow-[0_20px_50px_rgba(0,0,0,0.3)] mb-8">
-          <div className="flex-1 px-6 py-4 md:py-3 flex flex-col items-start border-b md:border-b-0 md:border-r border-brand-charcoal/10 transition-colors hover:bg-brand-sand/20 rounded-t-2xl md:rounded-l-full md:rounded-tr-none">
-            <label className="text-[9px] md:text-[10px] uppercase font-black text-brand-charcoal/40 tracking-widest mb-1">Check-in</label>
-            <input type="date" className="bg-transparent outline-none w-full text-xs md:text-sm font-bold text-brand-charcoal cursor-pointer" defaultValue={new Date().toISOString().split('T')[0]} />
-          </div>
-          <div className="flex-1 px-6 py-4 md:py-3 flex flex-col items-start border-b md:border-b-0 md:border-r border-brand-charcoal/10 transition-colors hover:bg-brand-sand/20">
-            <label className="text-[9px] md:text-[10px] uppercase font-black text-brand-charcoal/40 tracking-widest mb-1">Check-out</label>
-            <input type="date" className="bg-transparent outline-none w-full text-xs md:text-sm font-bold text-brand-charcoal cursor-pointer" defaultValue={new Date(Date.now() + 86400000).toISOString().split('T')[0]} />
-          </div>
+        <div className="max-w-sm md:max-w-md mx-auto w-full mb-8 mt-6 md:mt-10">
           <a 
             href="https://bookings.travelpleasure.in/Securebookings/?hotelid=14772"
             target="_blank"
             rel="noopener noreferrer"
-            className="m-1 bg-brand-gold text-brand-charcoal px-8 md:px-12 py-5 md:py-4 rounded-2xl md:rounded-full text-xs uppercase tracking-widest font-black hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/20"
+            className="w-full bg-brand-gold text-brand-charcoal py-4 md:py-5 rounded-xl md:rounded-full text-xs md:text-sm uppercase tracking-[0.2em] font-black hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 shadow-[0_20px_40px_rgba(212,175,55,0.2)] border border-brand-gold/50"
           >
             Check Availability
           </a>
